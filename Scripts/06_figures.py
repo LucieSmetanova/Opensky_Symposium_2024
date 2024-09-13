@@ -41,33 +41,33 @@ if name_str == 'osn_ESGG':
     grid_y = 107
 
 
-Grid_frame = pd.read_csv(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Grid_frame_ESGG_c2.csv', 
+Grid_frame = pd.read_csv('Output_files\Grid_frame_ESGG_c5.csv', 
 header=0,
 sep=','
 ) 
 
-Grid_frame2 = pd.read_csv(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Grid_frame2_ESGG_c2.csv', 
+Grid_frame2 = pd.read_csv('Output_files\Grid_frame2_ESGG_c5.csv', 
 header=0,
 sep=','
 ) 
 
-ESGG_polygon = pd.read_csv(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\ESGG_polygon.csv', 
+ESGG_polygon = pd.read_csv('Output_files\ESGG_polygon.csv', 
 header=0,
 sep=','
 ) 
 
 
-min_time = pd.read_csv(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\min_time_ESGG_c2.csv', 
+min_time = pd.read_csv('Output_files\min_time_ESGG_c5.csv', 
 header=0,
 sep=','
 ) 
 
-min_time_result = pd.read_csv(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\min_time_result_ESGG_c2.csv', 
+min_time_result = pd.read_csv('Output_files\min_time_result_ESGG_c5.csv', 
 header=0,
 sep=','
 ) 
 
-min_times = pd.read_csv(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\min_times_ESGG_c2.csv', 
+min_times = pd.read_csv('Output_files\min_times_ESGG_c5.csv', 
 header=0,
 sep=','
 ) 
@@ -118,7 +118,7 @@ sep=','
 
 # axes.legend().set_visible(False)
 # axes.grid()
-# plt.savefig(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Plots\traj_ESGG_c2.jpg',bbox_inches="tight")
+# plt.savefig('Plots\traj_ESGG_c5.jpg',bbox_inches="tight")
 # plt.show()
 
 # using another axis labels than the plot gives
@@ -222,7 +222,7 @@ ax.figure.axes[-1].tick_params(labelsize=17)
 # ax.set_yticklabels(list(range(0, grid_y+1, 5)))
 # ax.set_xticks(ax.get_xticks()[::5])
 # ax.set_yticks(ax.get_yticks()[::5])
-plt.savefig(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Plots\heatmap_ESGG_c2.jpg',bbox_inches="tight")
+plt.savefig('Plots\heatmap_ESGG_c5.jpg',bbox_inches="tight")
 plt.show()
 
 number_of_flights = Grid_frame['flightID'].nunique()
@@ -231,12 +231,12 @@ print(number_of_flights,min_min_time,max_min_time,avg_min_time,median_min_time,s
 
 
 #################### SPACING DEVIATION ##################
-# spacing_dev2 = pd.read_csv(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\spacing_dev2_ESGG_c2.csv', 
+# spacing_dev2 = pd.read_csv('Output_files\spacing_dev2_ESGG_c5.csv', 
 # header=0,
 # sep=','
 # ) 
 
-spacing_dev2 = pd.read_csv(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\spacing_dev2_ESGG_c2.csv', 
+spacing_dev2 = pd.read_csv('Output_files\spacing_dev2_ESGG_c5.csv', 
 header=0,
 sep=','
 ) 
@@ -264,7 +264,7 @@ plt.yticks(fontsize=18)
 plt.legend(fontsize=17)
 ax.grid()
 fig = plot.get_figure()
-plt.savefig(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Plots\spacing_dev_ESGG_c2.jpg',bbox_inches="tight")
+plt.savefig('Plots\spacing_dev_ESGG_c5.jpg',bbox_inches="tight")
 plt.show()
 
 #line plot
@@ -283,7 +283,7 @@ new_dev.set_index('time_to_final', inplace=True)
 # axes.set_ylim(-600,600)
 # axes.set_xlim([0,900])                                                               #setting limits for axes
 # axes.grid()
-# plt.savefig(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Plots\spacing_dev_lineplot_ESGG_c2.jpg',bbox_inches="tight")
+# plt.savefig('Plots\spacing_dev_lineplot_ESGG_c5.jpg',bbox_inches="tight")
 
 # plt.show() 
 
@@ -398,7 +398,7 @@ axes.xaxis.set_tick_params(labelsize=19)
 axes.yaxis.set_tick_params(labelsize=19)
 #axes.legend(fontsize=17)                                                              #setting limits for axes
 axes.grid()
-plt.savefig(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Plots\spacing_dev_smooth_ESGG_c2.jpg',bbox_inches="tight")
+plt.savefig('Plots\spacing_dev_smooth_ESGG_c5.jpg',bbox_inches="tight")
 plt.show() 
 
 
@@ -416,7 +416,7 @@ print(quantile_width)
 #print(quantile_width_600)
 
 ################# SEQUENCE PRESSURE ###########################
-sequence_pressure = pd.read_csv(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\sequence_pressure_ESGG_c2.csv', 
+sequence_pressure = pd.read_csv('Output_files\sequence_pressure_ESGG_c5.csv', 
 header=0,
 sep=','
 ) 
@@ -442,7 +442,7 @@ plt.xticks(fontsize=18)
 plt.yticks(fontsize=18)
 plt.legend(fontsize=17)
 fig = plot.get_figure()
-plt.savefig(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Plots\sequence_press_ESGG_c2.jpg',bbox_inches="tight")
+plt.savefig('Plots\sequence_press_ESGG_c5.jpg',bbox_inches="tight")
 plt.show() 
 
 min_seq_pr = sequence_pressure.loc[(sequence_pressure.time_to_final <= 900)]["pressure"].min()
@@ -454,12 +454,12 @@ s2_seq_pr = round(sequence_pressure.loc[(sequence_pressure.time_to_final <= 900)
 print(max_seq_pr,min_seq_pr,avg_seq_pr,median_seq_pr,s2_seq_pr)
 
 ##################  THROUGHPUT ####################
-# total_throughput = pd.read_csv(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\total_throughput_ESGG_c2.csv', 
+# total_throughput = pd.read_csv('Output_files\total_throughput_ESGG_c5.csv', 
 # header=0,
 # sep=','
 # ) 
 
-throughput = pd.read_csv(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\throughput_ESGG_c2.csv', 
+throughput = pd.read_csv('Output_files\throughput_ESGG_c5.csv', 
 header=0,
 sep=','
 ) 
@@ -476,7 +476,7 @@ sep=','
 # plot.set_xlabel("Interval start",fontsize=19)
 # plot.set_ylabel("Total throughput",fontsize=19)
 # #plot.set_xticklabels(x_labels)
-# plt.savefig(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Plots\total_throughput_ESGG_c2.jpg',bbox_inches="tight")
+# plt.savefig('Plots\total_throughput_ESGG_c5.jpg',bbox_inches="tight")
 # plt.show() 
 
 throughput = throughput.loc[(throughput['time_to_final'] <= 600)]
@@ -501,7 +501,7 @@ plt.legend(["The 5th and 95th Quantiles"],fontsize=23)
 plt.xticks(fontsize=19)
 plt.yticks(fontsize=19)
 fig = plot.get_figure()
-plt.savefig(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Plots\throughput_ESGG_c2.jpg',bbox_inches="tight")
+plt.savefig('Plots\throughput_ESGG_c5.jpg',bbox_inches="tight")
 plt.show() 
 
 max_thr = abs(throughput.loc[(throughput.time_to_final <= 900)]['throughput'].max())
@@ -513,7 +513,7 @@ s2_thr = round(throughput.loc[(throughput.time_to_final <= 900)]['throughput'].s
 print(max_thr,min_thr,avg_thr,median_thr,s2_thr)
     
 ################# METERING EFFORT ######################
-metering_effort_fin = pd.read_csv(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\metering_effort_fin_ESGG_c2.csv', 
+metering_effort_fin = pd.read_csv('Output_files\metering_effort_fin_ESGG_c5.csv', 
 header=0,
 sep=','
 ) 
@@ -542,7 +542,7 @@ plot.set_xlabel("Minimum time to final",fontsize=19)
 plot.set_ylabel("Metering effort",fontsize=19)
 ax.set_xlim([0,900])                                                              
 ax.set_ylim([-4,3])
-plt.savefig(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Plots\metering_effort_ESGG_c2.jpg',bbox_inches="tight")
+plt.savefig('Plots\metering_effort_ESGG_c5.jpg',bbox_inches="tight")
 plt.show() 
 
 
@@ -554,7 +554,7 @@ plt.show()
 # plot.set_ylabel("Metering effort",fontsize=19)
 # ax.set_xlim([0,900])                                                              
 # ax.set_ylim([-2.5,2])
-# plt.savefig(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Plots\metering_effort_mov_av_90s_ESGG_c2.jpg',bbox_inches="tight")
+# plt.savefig('Plots\metering_effort_mov_av_90s_ESGG_c5.jpg',bbox_inches="tight")
 # plt.show() 
 
 metering_effort_fin['moving_average'] = metering_effort_fin.metering_effort_a.rolling(4).mean()
@@ -567,7 +567,7 @@ plot.set_xlabel("Minimum time to final",fontsize=19)
 plot.set_ylabel("Metering effort",fontsize=19)
 ax.set_xlim([0,900])                                                              
 ax.set_ylim([-2.5,2])
-plt.savefig(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Plots\metering_effort_mov_av_120s_ESGG_c2.jpg',bbox_inches="tight")
+plt.savefig('Plots\metering_effort_mov_av_120s_ESGG_c5.jpg',bbox_inches="tight")
 plt.show() 
 
 # metering_effort_fin['moving_average'] = metering_effort_fin.metering_effort_a.rolling(5).mean()
@@ -580,7 +580,7 @@ plt.show()
 # plot.set_ylabel("Metering effort",fontsize=19)
 # ax.set_xlim([0,900])                                                              
 # ax.set_ylim([-2.5,2])
-# plt.savefig(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Plots\metering_effort_mov_av_150s_ESGG_c2.jpg',bbox_inches="tight")
+# plt.savefig('Plots\metering_effort_mov_av_150s_ESGG_c5.jpg',bbox_inches="tight")
 # plt.show() 
 
 metering_effort_fin['moving_average'] = metering_effort_fin.metering_effort_a.rolling(7).mean()
@@ -593,7 +593,7 @@ plot.set_xlabel("Minimum time to final",fontsize=19)
 plot.set_ylabel("Metering effort",fontsize=19)
 ax.set_xlim([0,900])                                                              
 ax.set_ylim([-2.5,2])
-plt.savefig(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Plots\metering_effort_mov_av_210s_ESGG_c2.jpg',bbox_inches="tight")
+plt.savefig('Plots\metering_effort_mov_av_210s_ESGG_c5.jpg',bbox_inches="tight")
 plt.show() 
 
 # metering_effort_fin['moving_average'] = metering_effort_fin.metering_effort_a.rolling(10).mean()
@@ -606,7 +606,7 @@ plt.show()
 # plot.set_ylabel("Metering effort",fontsize=19)
 # ax.set_xlim([0,900])                                                              
 # ax.set_ylim([-2.5,2])
-# plt.savefig(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Plots\metering_effort_mov_av_300s_ESGG_c2.jpg',bbox_inches="tight")
+# plt.savefig('Plots\metering_effort_mov_av_300s_ESGG_c5.jpg',bbox_inches="tight")
 # plt.show() 
 
 # metering_effort_fin['moving_average'] = metering_effort_fin.metering_effort_a.rolling(13).mean()
@@ -619,7 +619,7 @@ plt.show()
 # plot.set_ylabel("Metering effort",fontsize=19)
 # ax.set_xlim([0,900])                                                              
 # ax.set_ylim([-2.5,2])
-# plt.savefig(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Plots\metering_effort_mov_av_390s_ESGG_c2.jpg',bbox_inches="tight")
+# plt.savefig('Plots\metering_effort_mov_av_390s_ESGG_c5.jpg',bbox_inches="tight")
 # plt.show() 
 
 # metering_effort_fin['moving_average'] = metering_effort_fin.metering_effort_a.rolling(18).mean()
@@ -632,7 +632,7 @@ plt.show()
 # plot.set_ylabel("Metering effort",fontsize=19)
 # ax.set_xlim([0,900])                                                              
 # ax.set_ylim([-2.5,2])
-# plt.savefig(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Plots\metering_effort_mov_av_540s_ESGG_c2.jpg',bbox_inches="tight")
+# plt.savefig('Plots\metering_effort_mov_av_540s_ESGG_c5.jpg',bbox_inches="tight")
 # plt.show() 
 
 # metering_effort_fin['moving_average'] = metering_effort_fin.metering_effort_a.rolling(27).mean()
@@ -645,14 +645,14 @@ plt.show()
 # plot.set_ylabel("Metering effort",fontsize=19)
 # ax.set_xlim([0,900])                                                              
 # ax.set_ylim([-2.5,2])
-# plt.savefig(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Plots\metering_effort_mov_av_810s_ESGG_c2.jpg',bbox_inches="tight")
+# plt.savefig('Plots\metering_effort_mov_av_810s_ESGG_c5.jpg',bbox_inches="tight")
 # plt.show() 
 
 print(max_mefA,min_mefA,avg_mefA,median_mefA,s2_mefA)
 
 ################ DENSITY DISTRIBUTIONS
 # FIGURE 2
-# frame = pd.read_csv(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\frame_ESGG_c2.csv', 
+# frame = pd.read_csv('Output_files\frame_ESGG_c5.csv', 
 # header=0,
 # sep=','
 # ) 
@@ -714,6 +714,6 @@ print(max_mefA,min_mefA,avg_mefA,median_mefA,s2_mefA)
 # #plot.set_yticklabels(y_labels)
 # plot.set_xlabel("Min time to final [sec]",fontsize=19)
 # plot.set_ylabel("Time",fontsize=19)
-# plt.savefig(r'C:\Users\lucsm87\OneDrive - Linköpings universitet\Opensky_24\Plots\figure2_ESGG_c2.jpg',bbox_inches="tight")
+# plt.savefig('Plots\figure2_ESGG_c5.jpg',bbox_inches="tight")
 # plt.show() 
 

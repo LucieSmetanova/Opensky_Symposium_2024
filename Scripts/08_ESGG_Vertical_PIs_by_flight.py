@@ -41,7 +41,7 @@ PEVAK_lat = 57.7733
 RISMA_lon = 11.9792
 RISMA_lat = 57.0419
 
-DATASET_DATA_DIR = os.path.join(r'C:\Users\lucsm87\Desktop\Data', airport_icao)
+DATASET_DATA_DIR = ('Cluster data')
 
 
 def get_all_states(csv_input_file):
@@ -67,7 +67,7 @@ def calculate_vfe():
 
     full_input_filename = os.path.join(DATA_INPUT_DIR, input_filename)
          
-    DATA_OUTPUT_DIR = os.path.join(DATASET_DATA_DIR, "PIs")
+    DATA_OUTPUT_DIR = os.path.join("Output_files", "PIs")
     output_filename = dataset_name + "_cluster6_PIs_vertical_by_flight.csv"
     full_output_filename = os.path.join(DATA_OUTPUT_DIR, output_filename)
     

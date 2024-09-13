@@ -46,7 +46,7 @@ RISMA_lon = 11.9792
 RISMA_lat = 57.0419
 
 
-DATA_DIR = os.path.join(r'C:\Users\lucsm87\Desktop\Data\ESGG', "PIs") 
+DATA_DIR = os.path.join("Output_files", "PIs") 
 
 #dataset_name = airport_icao + "_50NM_rwy_dataset_TT"
 #dataset_name = airport_icao + "_50NM_rwy_dataset_PM"
