@@ -10,7 +10,8 @@ Description of the scripts:
 04_throughput - calculates the throughput metric
 05_metering_effort - metering effort calculation
 06_figures - takes the output files from the scripts above and plots the Figures used in the paper
-07_ESGG_horizontal - calculates the distance in 50NM metric
-08_ESGG_vertical_PIs_by_flight - calculates the vertical metrics (time on levels, time in 50NM) for each flight
+07_ESGG_horizontal - calculates the distance in TMA metric
+08_ESGG_vertical_PIs_by_flight - calculates the vertical metrics (time on levels, time in TMA) for each flight
 09_ESGG_vertical_PIs_by_hour - calculates vertical metrics for each hour
-10_Opensky24_add_time_seq_effort - calculates the additional time in 50NM for each flight and the sequencing effort
+10_Opensky24_add_time_seq_effort - calculates the additional time in TMA for each flight and the sequencing effort
+
