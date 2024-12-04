@@ -1,0 +1,45 @@
+
+Presolve eliminates 38318 constraints and 95 variables.
+Adjusted problem:
+94848 variables, all binary
+150899 constraints, all linear; 302606 nonzeros
+	90 equality constraints
+	150809 inequality constraints
+1 linear objective; 988 nonzeros.
+
+CPLEX 12.7.1.0: mipdisplay=2
+mipgap=1e-1
+threads=6
+mipemphasis=0
+memoryemphasis=1
+nodefile=3
+treememlim=512
+MIP Presolve eliminated 105780 rows and 49805 columns.
+MIP Presolve modified 589898 coefficients.
+Reduced MIP has 158 rows, 179 columns, and 886 nonzeros.
+Reduced MIP has 179 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Found incumbent of value 8781.085000 after 0.30 sec. (169.82 ticks)
+Probing changed sense of 6 constraints.
+Probing time = 0.00 sec. (0.48 ticks)
+MIP Presolve eliminated 142 rows and 159 columns.
+MIP Presolve modified 2 coefficients.
+Reduced MIP has 16 rows, 20 columns, and 143 nonzeros.
+Reduced MIP has 20 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Probing time = 0.00 sec. (0.09 ticks)
+MIP Presolve eliminated 2 rows and 3 columns.
+MIP Presolve modified 2 coefficients.
+Reduced MIP has 14 rows, 17 columns, and 112 nonzeros.
+Reduced MIP has 17 binaries, 0 generals, 0 SOSs, and 0 indicators.
+
+Root node processing (before b&c):
+  Real time             =    0.33 sec. (197.68 ticks)
+Parallel b&c, 6 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.33 sec. (197.68 ticks)
+CPLEX 12.7.1.0: optimal integer solution within mipgap or absmipgap; objective 8281.108
+0 MIP simplex iterations
+0 branch-and-bound nodes
+absmipgap = 369.233, relmipgap = 0.0445874

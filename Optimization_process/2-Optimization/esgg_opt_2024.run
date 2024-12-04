@@ -1,0 +1,21 @@
+# jet stream run file May 2021
+
+reset;
+options solver cplex;
+option cplex_options 'mipdisplay=2 mipgap=1e-1 threads=6 mipemphasis=0 memoryemphasis=1 nodefile=3 treememlim=512';
+option log_file 'jet1.log';
+options presolve 1;
+option show_stats 1;
+option display_width 100,  display_1col 1000, omit_zero_rows 0; 
+option omit_zero_rows 1;
+#option omit_zero_cols 1;
+
+model esgg_opt_2024.mod; #model file
+data  esgg_opt_2024.dat; #data file 
+solve;
+display  x> 'esgg_opt_2024.out';
+display  y1> 'esgg_opt_2024.out';
+display Fuel> 'esgg_opt_2024.out';
+
+
+
